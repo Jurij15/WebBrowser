@@ -22,5 +22,14 @@ namespace WebBrowser.SettingsFiles {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("true")]
+        public string IsInDev {
+            get {
+                return ((string)(this["IsInDev"]));
+            }
+        }
     }
 }

@@ -22,5 +22,65 @@ namespace WebBrowser.SettingsFiles {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Fav1 {
+            get {
+                return ((string)(this["Fav1"]));
+            }
+            set {
+                this["Fav1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Fav2 {
+            get {
+                return ((string)(this["Fav2"]));
+            }
+            set {
+                this["Fav2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Fav3 {
+            get {
+                return ((string)(this["Fav3"]));
+            }
+            set {
+                this["Fav3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Fav4 {
+            get {
+                return ((string)(this["Fav4"]));
+            }
+            set {
+                this["Fav4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Fav5 {
+            get {
+                return ((string)(this["Fav5"]));
+            }
+            set {
+                this["Fav5"] = value;
+            }
+        }
     }
 }

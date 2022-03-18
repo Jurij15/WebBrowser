@@ -22,5 +22,17 @@ namespace WebBrowser.SettingsFiles {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CanSeeFavouritesInMainWin {
+            get {
+                return ((string)(this["CanSeeFavouritesInMainWin"]));
+            }
+            set {
+                this["CanSeeFavouritesInMainWin"] = value;
+            }
+        }
     }
 }
