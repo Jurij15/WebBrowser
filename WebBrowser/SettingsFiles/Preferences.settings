@@ -5,5 +5,8 @@
     <Setting Name="CanSeeFavouritesInMainWin" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="HomePage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://www.google.com/</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

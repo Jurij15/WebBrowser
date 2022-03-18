@@ -34,5 +34,17 @@ namespace WebBrowser.SettingsFiles {
                 this["CanSeeFavouritesInMainWin"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://www.google.com/")]
+        public string HomePage {
+            get {
+                return ((string)(this["HomePage"]));
+            }
+            set {
+                this["HomePage"] = value;
+            }
+        }
     }
 }

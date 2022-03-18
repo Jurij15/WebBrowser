@@ -11,11 +11,21 @@
         Title="Web Browser" Height="676" Width="1128"
         ui:WindowHelper.UseModernWindowStyle="True">
     <ui:SimpleStackPanel>
-        <Menu Margin="0,0,402,0">
-            <MenuItem Header="Options">
+        <Menu Margin="0,0,455,0">
+            <MenuItem Header="Options" Width="75" Height="39">
                 <MenuItem Header="Favourites">
                     <MenuItem Header="TBD"/>
                 </MenuItem>
+                <Separator/>
+                <MenuItem Header="Exit" x:Name="ExitBtn" Click="ExitBtn_Click"/>
+            </MenuItem>
+            <MenuItem Header="Home" x:Name="HomeBtn" Click="HomeBtn_Click"></MenuItem>
+            <MenuItem Header="Back" x:Name="BackBtn" Click="BackBtn_Click"></MenuItem>
+            <MenuItem Header="Forward" x:Name="ForwardBtn" Click="ForwardBtn_Click"></MenuItem>
+            <MenuItem Header="Reload" x:Name="ReloadBtn" Click="ReloadBtn_Click"></MenuItem>
+            <MenuItem Header="Stop" x:Name="StopBtn" Click="StopBtn_Click"></MenuItem>
+            <MenuItem Header="Favourites" x:Name="FavouritesBtnTest">
+                
             </MenuItem>
         </Menu>
         <Wpf:WebView2 HorizontalAlignment="Center" Height="623" VerticalAlignment="Center" Width="1128" RenderTransformOrigin="0.5,0.5" Name="webView"
@@ -29,7 +39,8 @@
                 </TransformGroup>
             </Wpf:WebView2.RenderTransform>
         </Wpf:WebView2>
-        <TextBox HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="AdressBox" VerticalAlignment="Top" Width="387" RenderTransformOrigin="0.5,0.5" Margin="731,-663,0,0">
+        <TextBox x:Name="AdressBox" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="AdressBox" VerticalAlignment="Top" Width="387" RenderTransformOrigin="0.5,0.5" Margin="731,-663,0,0">
         </TextBox>
+        <MenuItem x:Name="GoBtn" Click="GoBtn_Click" Header="GO!" Margin="678,-659,402,643"/>
     </ui:SimpleStackPanel>
 </Window>
