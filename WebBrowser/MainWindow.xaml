@@ -8,7 +8,7 @@
         xmlns:Wpf="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf" x:Class="WebBrowser.MainWindow"
         mc:Ignorable="d"
     xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
-        Title="Web Browser" Height="676" Width="1128"
+        Title="Web Browser" Height="822" Width="1448"
         ui:WindowHelper.UseModernWindowStyle="True">
     <ui:SimpleStackPanel>
         <Menu Margin="0,0,455,0">
@@ -24,23 +24,17 @@
             <MenuItem Header="Forward" x:Name="ForwardBtn" Click="ForwardBtn_Click"></MenuItem>
             <MenuItem Header="Reload" x:Name="ReloadBtn" Click="ReloadBtn_Click"></MenuItem>
             <MenuItem Header="Stop" x:Name="StopBtn" Click="StopBtn_Click"></MenuItem>
-            <MenuItem Header="Favourites" x:Name="FavouritesBtnTest">
-                
+            <MenuItem Click="FavouritesBtnTest_Click" Header="Favourites" x:Name="FavouritesBtnTest">
+
             </MenuItem>
         </Menu>
-        <Wpf:WebView2 HorizontalAlignment="Center" Height="623" VerticalAlignment="Center" Width="1128" RenderTransformOrigin="0.5,0.5" Name="webView"
-                  Source="https://www.microsoft.com">
-            <Wpf:WebView2.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleY="-1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Wpf:WebView2.RenderTransform>
-        </Wpf:WebView2>
-        <TextBox x:Name="AdressBox" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="AdressBox" VerticalAlignment="Top" Width="387" RenderTransformOrigin="0.5,0.5" Margin="731,-663,0,0">
+        <TextBox x:Name="AdressBox" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="AdressBox" VerticalAlignment="Top" Width="387" RenderTransformOrigin="0.5,0.5" Margin="1173,-40,0,0">
         </TextBox>
-        <MenuItem x:Name="GoBtn" Click="GoBtn_Click" Header="GO!" Margin="678,-659,402,643"/>
+        <Button x:Name="GoBtn" Click="GoBtn_Click" Content="GO!" Margin="1120,-35,0,0" VerticalAlignment="Top"/>
+        <DockPanel Margin="0,0,0,-620">
+            <wv2:WebView2 Name="webView"
+                  Source="https://www.microsoft.com" DockPanel.Dock="Bottom" HorizontalAlignment="Center" VerticalAlignment="Center"
+   />
+        </DockPanel>
     </ui:SimpleStackPanel>
 </Window>

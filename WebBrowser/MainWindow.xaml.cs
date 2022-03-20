@@ -29,6 +29,11 @@ namespace WebBrowser
             Preferences preferences = new Preferences();
             string home = preferences.HomePage;
             AdressBox.Text = home;
+            if (webView != null && webView.CoreWebView2 != null)
+            {
+                webView.CoreWebView2.Navigate(home);
+                AdressBox.Text = home;
+            }
         }
 
         private void HomeBtn_Click(object sender, RoutedEventArgs e)
@@ -74,6 +79,19 @@ namespace WebBrowser
             {
                 webView.CoreWebView2.Navigate(adress);;
             }
+        }
+
+        private void FavouritesBtnTest_Click(object sender, RoutedEventArgs e)
+        {
+            //open the window
+            FavouritesWindow favouritesWindow = new FavouritesWindow();
+            favouritesWindow.ShowDialog();
+            favouritesWindow.Activate();
+        }
+
+        private void GoBtn_Click_1(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
