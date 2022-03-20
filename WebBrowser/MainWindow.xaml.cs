@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +35,22 @@ namespace WebBrowser
                 webView.CoreWebView2.Navigate(home);
                 AdressBox.Text = home;
             }
+            //favourites situation
+            string setting = preferences.CanSeeFavouritesInMainWin;
+            if (setting == "true")
+            {
+                FavouritesInMenu.Visibility = Visibility.Collapsed;
+            }
+            else if (setting == "false")
+            {
+                FavouritesBtnTest.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            Environment.Exit(0);
+            base.OnClosing(e);
         }
 
         private void HomeBtn_Click(object sender, RoutedEventArgs e)
@@ -83,15 +100,24 @@ namespace WebBrowser
 
         private void FavouritesBtnTest_Click(object sender, RoutedEventArgs e)
         {
+            /*
             //open the window
             FavouritesWindow favouritesWindow = new FavouritesWindow();
             favouritesWindow.ShowDialog();
             favouritesWindow.Activate();
+            */
+        }
+        private void PreferencesBtn_Click(object sender, RoutedEventArgs e)
+        {
+            PreferencesWindow preferencesWindow = new PreferencesWindow();
+            preferencesWindow.ShowDialog();
+            preferencesWindow.Activate();
         }
 
-        private void GoBtn_Click_1(object sender, RoutedEventArgs e)
+        private void Window_Closing(object sender, CancelEventArgs e)
         {
-
+            Environment.Exit(0);
+            //base.OnClosing(e);
         }
     }
 }

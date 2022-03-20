@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="CanSeeFavouritesInMainWin" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">true</Value>
     </Setting>
     <Setting Name="HomePage" Type="System.String" Scope="User">
       <Value Profile="(Default)">https://www.google.com/</Value>
