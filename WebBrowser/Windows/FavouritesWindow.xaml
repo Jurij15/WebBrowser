@@ -7,6 +7,14 @@
                 xmlns:ui="http://schemas.modernwpf.com/2019"
         mc:Ignorable="d"
         Title="FavouritesWindow" Height="225" Width="336"
-                ui:WindowHelper.UseModernWindowStyle="True">
-    
+                ui:WindowHelper.UseModernWindowStyle="True" ResizeMode="NoResize">
+    <ui:SimpleStackPanel>
+        <ListBox Margin="0,0,206,-209" x:Name="FavListBox" ScrollViewer.VerticalScrollBarVisibility="Visible">
+            <ListBoxItem Content="Fav1" x:Name="Fav1InList" Selected="Fav1InList_Selected"/>
+        </ListBox>
+        <Button x:Name="ShowSelFav" Click="ShowSelFav_Click" Content="Show selected favourite" Height="32" Width="191" Margin="135,0,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="OpenSelFav" Click="OpenSelFav_Click" Content="Open selected favourite" Height="32" Width="191" Margin="135,5,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="FavAdressBox" x:Name="FavAdressBox" VerticalAlignment="Top" Width="191" Margin="135,4,0,0"/>
+    </ui:SimpleStackPanel>
+
 </Window>

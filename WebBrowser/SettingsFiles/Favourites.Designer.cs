@@ -13,7 +13,7 @@ namespace WebBrowser.SettingsFiles {
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.0.3.0")]
-    internal sealed partial class Favourites : global::System.Configuration.ApplicationSettingsBase {
+    public sealed partial class Favourites : global::System.Configuration.ApplicationSettingsBase {
         
         private static Favourites defaultInstance = ((Favourites)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Favourites())));
         
@@ -25,7 +25,7 @@ namespace WebBrowser.SettingsFiles {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://youtube.com/")]
         public string Fav1 {
             get {
                 return ((string)(this["Fav1"]));
@@ -80,6 +80,18 @@ namespace WebBrowser.SettingsFiles {
             }
             set {
                 this["Fav5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Fav6 {
+            get {
+                return ((string)(this["Fav6"]));
+            }
+            set {
+                this["Fav6"] = value;
             }
         }
     }

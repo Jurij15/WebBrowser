@@ -18,6 +18,10 @@
                 <MenuItem Header="Favourites" x:Name="FavouritesInMenu">
                     <MenuItem Header="TBD"/>
                 </MenuItem>
+                <MenuItem Header="Specials" x:Name="SpecialsMenuBtn" Click="SpecialsMenuBtn_Click"/>
+                <Separator/>
+                <MenuItem Header="About"/>
+                <MenuItem x:Name="devtag" Header="DEV_Build"/>
                 <Separator/>
                 <MenuItem Header="Exit" x:Name="ExitBtn" Click="ExitBtn_Click"/>
             </MenuItem>

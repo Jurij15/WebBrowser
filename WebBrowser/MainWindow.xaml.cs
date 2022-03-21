@@ -1,4 +1,5 @@
-﻿using System;
+﻿#define DEV_BUILD
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -45,6 +46,9 @@ namespace WebBrowser
             {
                 FavouritesBtnTest.Visibility = Visibility.Collapsed;
             }
+#if (!DEV_BUILD)
+            devtag.Visibility = Visibility.Collapsed;
+#endif
         }
 
         protected override void OnClosing(CancelEventArgs e)
@@ -100,12 +104,10 @@ namespace WebBrowser
 
         private void FavouritesBtnTest_Click(object sender, RoutedEventArgs e)
         {
-            /*
             //open the window
             FavouritesWindow favouritesWindow = new FavouritesWindow();
             favouritesWindow.ShowDialog();
             favouritesWindow.Activate();
-            */
         }
         private void PreferencesBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -118,6 +120,13 @@ namespace WebBrowser
         {
             Environment.Exit(0);
             //base.OnClosing(e);
+        }
+
+        private void SpecialsMenuBtn_Click(object sender, RoutedEventArgs e)
+        {
+            SpecialsWindow specialsWindow = new SpecialsWindow();
+            specialsWindow.ShowDialog();
+            specialsWindow.Activate();
         }
     }
 }

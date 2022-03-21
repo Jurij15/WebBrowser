@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="Fav1" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">https://youtube.com/</Value>
     </Setting>
     <Setting Name="Fav2" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
@@ -15,6 +15,9 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Fav5" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Fav6" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>
