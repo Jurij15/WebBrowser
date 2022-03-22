@@ -1,4 +1,5 @@
 ﻿#define DEV_BUILD
+//#undef DEV_BUILD
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
